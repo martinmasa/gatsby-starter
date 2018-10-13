@@ -15,9 +15,14 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "lint": "eslint --ext .js,.jsx,.es6 ./src/"
+    "lint": "eslint --ext .js,.jsx,.es6 ./src/",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "precommit": "npm run lint"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-angular": "^7.1.2",
+    "@commitlint/core": "^7.2.1",
     "eslint": "^5.7.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
@@ -25,6 +30,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.1.2",
     "prettier": "^1.14.3"
   }
 }
