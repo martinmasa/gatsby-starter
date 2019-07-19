@@ -1,3 +1,5 @@
+const prettierOptions = require('./.prettierrc');
+
 const OFF = 0;
 const ERROR = 2;
 
@@ -21,16 +23,7 @@ module.exports = {
     'prettier'
   ],
   'rules': {
-    'prettier/prettier': [ERROR, {
-      "arrowParens": "always",
-      "bracketSpacing": true,
-      "jsxBracketSameLine": false,
-      "parser": "babylon",
-      "printWidth": 100,
-      "semi": true,
-      "singleQuote": true,
-      "trailingComma": "none"
-    }],
+    'prettier/prettier': [ERROR, prettierOptions],
     'arrow-body-style': OFF,
     'arrow-parens': OFF,
     'camelcase': OFF,
